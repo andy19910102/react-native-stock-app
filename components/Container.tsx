@@ -1,8 +1,9 @@
 import { ScrollView, StyleSheet } from 'react-native';
 
-export default function Container({ children }: { children: React.ReactNode }) {
+export function DarkContainer({ children }: { children: React.ReactNode }) {
     return <ScrollView
         contentContainerStyle={styles.container}
+        className="bg-neutral-900"
     >
         {children}
     </ScrollView>;
@@ -11,6 +12,5 @@ export default function Container({ children }: { children: React.ReactNode }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 20,
     },
 });
