@@ -1,50 +1,62 @@
-# Welcome to your Expo app 👋
+# React Native Stock App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+這是一個使用 Expo + React Native 開發的手機 App 應用程式，可用於產生 iOS 與 Android 的 App 安裝檔。
+後端的 API 將由 NTU CSIE Python程式設計課程學員提供，用於串接此應用程式所需要的股價資訊。
 
-## Get started
+## 開發環境準備與啟動方法
 
-1. Install dependencies
+### 1. 安裝 Node.js
 
-   ```bash
-   npm install
-   ```
+前往 Node.js 官方網站，下載並安裝 Node.js(LTS)版本(22.11.0)
 
-2. Start the app
+[https://nodejs.org/en](https://nodejs.org/en)
 
-   ```bash
-    npx expo start
-   ```
+### 2. 安裝必要套件
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+如果安裝成功你會看到專案目錄中多出一個 node_modules 資料夾。
+這個 node_modules 資料夾用於存放所有專案會用到的套件。
+相關套件資訊與版本可參考 package.json 檔案。
 
-## Learn more
+### 3. 透過實體手機安裝 Expo Go
 
-To learn more about developing your project with Expo, look at the following resources:
+Expo Go 是一個手機App應用程式開發工具（可在 iOS 和 Android 上使用），讓開發者可以快速在真實裝置上運行和測試使用 Expo 框架 建立的 React Native 應用程式，而不需要進行繁瑣的編譯與打包過程。
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+#### 使用 iOS 手機下載 Expo Go:
+https://apps.apple.com/us/app/expo-go/id982107779
 
-## Join the community
+#### 使用 Android 手機下載 Expo Go:
+https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en&pli=1
 
-Join our community of developers creating universal apps.
+### 3.1 Mac電腦可考慮安裝 Xcode 與 iOS Simulator
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+點選 App Store 搜尋 Xcode 並安裝。安裝通常需要一段時間請保持電腦有持續的電源供應與穩定的網路。
+
+安裝完成後，打開 Xcode，點選上方選單列的 Xcode > Preferences > Components，等待 iOS Simulator 相關組件下載完成。
+
+點選 Xcode 上方選單列的 Xcode > Open Developer Tool > Simulator，即可開啟 iOS Simulator。
+
+![開啟iOS Simulator](https://i.imgur.com/sUQcqzA.jpeg)
+
+### 4. 啟動React Native App應用程式
+
+確保你的手機與開發時所使用的電腦連結同一個網路來源（亦可使用手機熱點），並透過以下指令啟動應用程式。
+
+```
+npm run start
+```
+
+#### 使用實體手機預覽
+
+掃描終端機畫面上出現的 QR Code 即可在手機上預覽 App 的運作。
+
+#### 使用 iOS Simulator 預覽
+
+確保 iOS Simulator 已經開啟，按下 `i` 鍵即可在 iOS Simulator 上預覽 App 的運作。
+
+### 關閉應用程式
+
+在終端機中按下 `Ctrl + C` 即可關閉應用程式。
