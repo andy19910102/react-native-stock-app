@@ -16,10 +16,10 @@ GET -> https://your-website.com
         {
             "id": "2330", # 股票代號 id
             "name": "台積電", # 股票名稱 stock["n"]
-            "price": int or float, # 最新成交價 stock["z"]
-            "change": int or float, # 漲跌價 stock["z"] - stock["y"]
-            "volume": int or float, # 成交量 stock["v"]
-            "date": "2024-01-01" # 更新時間 stock["d"]
+            "price": float, # 最新成交價 stock["z"] # 轉換為 float
+            "change": float, # 漲跌價 stock["z"] - stock["y"] # 轉換為 float 注意計算小數點問題可以透過 round() 處理
+            "volume": int, # 成交量 stock["v"] # 轉換為 int
+            "date": "2024-01-01 15:00:00" # 更新時間 stock["d"] + " " + stock["t"]
         },
         {
             ...
