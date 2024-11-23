@@ -3,6 +3,34 @@
 這是一個使用 Expo + React Native 開發的手機 App 應用程式，可用於產生 iOS 與 Android 的 App 安裝檔。
 後端的 API 將由 NTU CSIE Python程式設計課程學員提供，用於串接此應用程式所需要的股價資訊。
 
+# 後端API資訊
+
+API 請求路徑：
+
+GET -> https://your-website.com
+
+```
+{
+    "name": "Andy", # 你的名字
+    "stock_list": [
+        {
+            "id": "2330", # 股票代號 id
+            "name": "台積電", # 股票名稱 stock["n"]
+            "price": int or float, # 最新成交價 stock["z"]
+            "change": int or float, # 漲跌價 stock["z"] - stock["y"]
+            "volume": int or float, # 成交量 stock["v"]
+            "date": "2024-01-01" # 更新時間 stock["d"]
+        },
+        {
+            ...
+        },
+        {
+            ...
+        }
+    ]
+}
+```
+
 ## 開發環境準備與啟動方法
 
 ### 1. 安裝 Node.js
